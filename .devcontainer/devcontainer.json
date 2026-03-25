@@ -1,0 +1,41 @@
+{
+  "name": "EDA Streaming Lab",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylint"
+      ]
+    }
+  }
+}
+```
+
+4. Commit the file
+
+What this does: when a learner opens the Codespace, it automatically uses Python 3.11 and runs `pip install -r requirements.txt` for them. They don't need to do Step 0 of the lab manually — the environment is already ready.
+
+---
+
+## Step D — Test It Yourself (10 minutes — do this before the session)
+
+1. On your repository page, click the green **"Code"** button
+2. Click the **"Codespaces"** tab
+3. Click **"Create codespace on main"**
+4. Wait 60–90 seconds — a VS Code editor will open in your browser
+5. At the bottom you'll see a **Terminal** panel — if not, go to the top menu → **Terminal** → **New Terminal**
+6. Type: `python --version` — you should see `Python 3.11.x`
+7. Type: `pip list` — you should see `Faker` and `python-dateutil` already installed
+8. Type: `python producer.py` — it runs without error (nothing happens because the file just has imports)
+
+**You're done.** That is the environment your learners will use.
+
+---
+
+## Step E — Get the Shareable Link for Learners
+
+The link format is:
+```
+https://codespaces.new/Aidin12/eda-streaming-lab
